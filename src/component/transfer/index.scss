@@ -1,0 +1,105 @@
+
+$disabledColor: #bbb;
+$selectedColor: #e6f7ff;
+$hoverBg: #f5f5f5;
+$btnPrimaryColor: #1890ff;
+$normalBoder: 1px solid #d9d9d9;
+
+.transfer {
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .pl8 {
+    padding-left: 8px;
+  }
+  .transfer-box {
+    height: 400px;
+    width: 180px;
+    border: $normalBoder;
+    display: flex;
+    flex-direction: column;
+  }
+  .transfer-title-box {
+    padding: 6px 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .transfer-title {
+    flex: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: right;
+    text-overflow: ellipsis;
+  }
+  .transfer-title-inner {
+    display: flex;
+    align-items: center;
+  }
+  .transfer-content {
+    height: 100%;
+    overflow-y: scroll;
+    border-top: $normalBoder;
+    flex: auto;
+  }
+  .transfer-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 8px;
+  }
+  .transfer-action-btn {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    margin: 0;
+    border-radius: 2px;
+    border: 1px solid $btnPrimaryColor;
+    background: $btnPrimaryColor;
+    cursor: pointer;
+    color: #fff;
+    &:disabled {
+      border: $normalBoder;
+      background: $hoverBg;
+      color: $disabledColor;
+      cursor: not-allowed;
+    }
+  }
+  .transfer-btn-right {
+    margin-bottom: 4px;
+  }
+  .transfer-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 6px 12px;
+    line-height: 24px;
+    transition: all .3s;
+    &:hover {
+      background-color: $hoverBg;
+    }
+  }
+  .transfer-item-checked {
+    &:hover {
+      background-color: $selectedColor;
+    }
+    background-color: $selectedColor;
+  }
+  .transfer-item-disabled {
+    cursor: not-allowed;
+    color: $disabledColor;
+    input {
+      cursor: not-allowed;
+    }
+  }
+  .transfer-item-text {
+    flex: auto;
+    overflow: auto;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .hand {
+    cursor: pointer;
+  }
+}
